@@ -1,0 +1,123 @@
+/* general body style */
+body {
+	font-family: Arial, Verdana, sans-serif;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/* custom for the logo portion */
+.header {
+	padding: 20px;
+	text-align: left;
+	background: #464646;
+}
+/* more specific customization */
+.header h1 {
+	font-size: 40px;
+}
+
+/* nav bar stuff */
+.navbar {
+	overflow: hidden;
+	background-color: #323232;
+}
+/* l0nks */
+.navbar a {
+	float: left; /* l0nks stay side-by-side */
+	display: block; /* for responsive reasons */
+	color: #FFFFFF;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none; /* remove underline */
+}
+/* right align l0nk */
+.navbar a.right {
+	float: right;
+}
+/* hover mode */
+.navbar a:hover {
+	background-color: #505050;
+	color: #000099;
+}
+/* "ensure proper sizing" */
+* {
+	box-sizing: border-box;
+}
+
+/* columiniun */
+.row {
+	display: flex;
+	flew-wrap: wrap;
+}
+/* two unequal columns that sit aside */
+/* left */
+.sidenav {
+	width: 10%; /* sets width of sidebar */
+	height: 220px;
+	background-color: #505050;
+	padding-top: 10px;
+	position: static; /* stays in place when scroll */
+	z-index: 1; /* stay on top */
+	top: 10; /* stay at top */
+	left: 1;
+	overflow-x: hidden; /* no horizontal scroll */
+	float: left;
+}
+/* the buttons */
+.sidenav button {
+	display: block;
+	background-color: inherit;
+	color: #FFFFFF;
+	padding: 15px 10px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 15px;
+	z-index: 1;
+}
+/* hover mode 2 */
+.sidenav button:hover {
+	background-color: #323232;
+}
+/* the active one */
+.sidenav button.active {
+	background-color: #323232;
+}
+/* style the tabs */
+.tabcontent {
+	margin-left: 0; /* space away from sidenav */
+	padding: 10px;
+	width: 90%;
+	float: left;
+	overflow-wrap: break-word;
+}
+
+/* making shit responsive */
+/* when screen less than 700px wide make the two columns stack */
+@media screen and (max-width: 700px) {
+	.row {
+		flex-direction: column;
+	}
+}
+/* when screen less than 400px wide make nav l0nks stack */
+@media screen and (max-width: 400px) {
+	.navbar a {
+		float:none;
+		width: 100%;
+	}
+}
+/* when screen height less than 450 px, change style of sidenav */
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 5px; font-size: 18px;}
+}
+
+/* ew feet */
+.footer {
+	padding: .1px;
+	text-align: center;
+	background: #505050;
+	bottom: 0; /* put this bih at the bottom where it belongs */
+}
