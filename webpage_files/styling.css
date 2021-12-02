@@ -38,6 +38,7 @@ body {
 .navbar a:hover {
 	background-color: #505050;
 	color: #000099;
+	outline: 2px solid #404040;
 }
 /* "ensure proper sizing" */
 * {
@@ -47,7 +48,7 @@ body {
 /* columiniun */
 .row {
 	display: flex;
-	flew-wrap: wrap;
+	flex-wrap: wrap;
 }
 /* two unequal columns that sit aside */
 /* left */
